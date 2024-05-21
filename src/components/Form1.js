@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import Input1 from "./Input1";
+import CrudForInput from './CrudForInput';
 import { formData } from "../data/formData";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -98,11 +99,18 @@ const[FormData,setFormData] = useState(formData)
 
     
   }
+  
+  function change(val, obj) {
+    let copyOfData = FormData;
+    let index = FormData.findIndex((v) => v.id == obj.id);
+    copyOfData[index].value = val;
+    setFormData(copyOfData);
+  }
   return (
     <div className="signup_container w-100 d-flex justify-content-center " style={{marginBottom:"20px"}}>
       <div className="signup_form mt-2 w-30">
       <form onSubmit={submitHandler}>
-        {formData.map((obj,index) => <Input1 key={index} edit={editData} obj={obj}/>
+        {formData.map((obj,index) => <CrudForInput key={index} edit={editData} obj={obj} change={change}/>
         )}
         <button type="submit" className="btn btn-primary">
           Submit

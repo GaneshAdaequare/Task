@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Input({ obj, edit, onChange }) {
+function Input({ obj, edit, change }) {
   let v = "";
   if (edit !== null) {
     v = edit[obj.name];
@@ -8,7 +8,7 @@ function Input({ obj, edit, onChange }) {
 
   const [val, setVal] = useState(v);
 
-  onChange(val, obj);
+  change(val, obj);
 
   return (
     <div>

@@ -51,7 +51,7 @@ function CrudFormAdd({ productsData, setProductsData, record }) {
         <div className="signup_form mt-2 w-30">
           <form onSubmit={submitHandler}>
             {formDataForCrud.map((obj) => (
-              <CrudForInput obj={obj} edit={record} onChange={change} />
+              <CrudForInput obj={obj} edit={record} change={change} />
             ))}
             <div style={{marginLeft:"60%"}}>
             <button  className='btn btn-danger m-1'>Cancel</button>

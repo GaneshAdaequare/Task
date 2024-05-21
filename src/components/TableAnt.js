@@ -5,7 +5,6 @@ function TableAnt({data,col}) {
   return (
     <div>
         <Table dataSource={data} columns={col}/>
-      
     </div>
   )
 }

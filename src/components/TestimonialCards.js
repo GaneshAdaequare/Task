@@ -72,7 +72,7 @@ const Testimonial = () => {
         <div className='pic-cont  slider-container'>
         <div className="">
             <Slider {...settings}>
-            {/* <StarFilled /> */}
+           
                     <div className="card1 test">
                         <h4>John doe</h4>
                         <h6><StarFilled className='ico' /><StarFilled className='ico' />
@@ -101,15 +101,12 @@ const Testimonial = () => {
                         <StarFilled className='ico' /></h6>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat vel quos autem nulla nobis</p>
                         <p className='trade'>Linda-Designer</p>
- 
                     </div>
                    
             </Slider>
             </div>
  
         </div>
-       
- 
         </>
     )
 }
